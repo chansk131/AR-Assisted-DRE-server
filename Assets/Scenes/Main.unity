@@ -5283,6 +5283,85 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1072440385}
   m_Mesh: {fileID: 4300000, guid: 01a093a2c3daaad40a1057a15740515c, type: 3}
+--- !u!1 &1080895208
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1080895209}
+  - component: {fileID: 1080895211}
+  - component: {fileID: 1080895210}
+  m_Layer: 0
+  m_Name: SensorManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1080895209
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1080895208}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2141973367}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1080895210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1080895208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f2ec2f82122aa9347bb80d1090f79977, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  xOffset: 0
+  yOffset: 0
+  zOffset: 0
+  xRotation: 0
+  yRotation: 0
+  zRotation: 0
+  sensorTS1: 1
+  sensorTS2: 0
+  sensorTS3: 1
+  sensorTS4: 0
+  sensorPPS1: -1
+  sensorPPS2: -1
+  sensorPPS3: -1
+  sensorPPS4: -1
+  sensorOffset1: 0
+  sensorOffset2: 0
+  sensorOffset3: 0
+  sensorOffset4: 0
+  sensorFinger1: {fileID: 303427681}
+  sensorFinger2: {fileID: 0}
+  sensorFinger3: {fileID: 1529176967}
+  sensorFinger4: {fileID: 0}
+  landmarks: {fileID: 0}
+  size: 1
+  valueA: 0.7
+  pressureViz: 0
+  fXLocal: {x: 0, y: 0, z: 0}
+--- !u!114 &1080895211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1080895208}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7811ea06f62af7d4787c4f2775e3f3cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1113835757
 GameObject:
   m_ObjectHideFlags: 0
@@ -10672,6 +10751,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 848930225}
+  - {fileID: 1080895209}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
