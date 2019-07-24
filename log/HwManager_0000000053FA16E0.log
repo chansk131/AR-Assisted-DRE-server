@@ -1,6 +1,6 @@
-Log file C:\Users\chan1\Documents\MSc Individual Project\Projects\Final\AR-Assisted-DRE-server\log\HwManager_0000000040526E60.log created on 2019-07-22 at 12:47:07 PM
+Log file C:\Users\chan1\Documents\MSc Individual Project\Projects\Final\AR-Assisted-DRE-server\log\HwManager_0000000053FA16E0.log created on 2019-07-22 at 04:12:06 PM
 System Logging Level = 2
-Creating Hardware Manager 0000000040526E60...
+Creating Hardware Manager 0000000053FA16E0...
 Using Plugin folder of C:\Users\chan1\Documents\MSc Individual Project\Projects\Final\AR-Assisted-DRE-server\Assets\Plugins\x86_64\HwPlugins\
 Building factory using searchPath C:\Users\chan1\Documents\MSc Individual Project\Projects\Final\AR-Assisted-DRE-server\Assets\Plugins\x86_64\HwPlugins\Hw*Lib.dll
 Loading HwArrayG2Lib.dll...success!
@@ -17,11 +17,11 @@ Loading HWTileLib.dll...success!
 Built factory for 11 plugins:
 ArrayG2 ArrayG3 D600 DigiUsb Emulator Loadstar Mensor Nidaq OmegaTemp Reference Tile 
 
-Destroying Hardware Manager 0000000040526E60
+Destroying Hardware Manager 0000000053FA16E0
 Factory is purged
-Log file C:\Users\chan1\Documents\MSc Individual Project\Projects\Final\AR-Assisted-DRE-server\log\HwManager_0000000040526E60.log created on 2019-07-22 at 12:50:09 PM
+Log file C:\Users\chan1\Documents\MSc Individual Project\Projects\Final\AR-Assisted-DRE-server\log\HwManager_0000000053FA16E0.log created on 2019-07-22 at 04:14:33 PM
 System Logging Level = 2
-Creating Hardware Manager 0000000040526E60...
+Creating Hardware Manager 0000000053FA16E0...
 Using Plugin folder of C:\Users\chan1\Documents\MSc Individual Project\Projects\Final\AR-Assisted-DRE-server\Assets\Plugins\x86_64\HwPlugins\
 Building factory using searchPath C:\Users\chan1\Documents\MSc Individual Project\Projects\Final\AR-Assisted-DRE-server\Assets\Plugins\x86_64\HwPlugins\Hw*Lib.dll
 Loading HwArrayG2Lib.dll...success!
@@ -38,26 +38,5 @@ Loading HWTileLib.dll...success!
 Built factory for 11 plugins:
 ArrayG2 ArrayG3 D600 DigiUsb Emulator Loadstar Mensor Nidaq OmegaTemp Reference Tile 
 
-Destroying Hardware Manager 0000000040526E60
-Factory is purged
-Log file C:\Users\chan1\Documents\MSc Individual Project\Projects\Final\AR-Assisted-DRE-server\log\HwManager_0000000040526E60.log created on 2019-07-22 at 02:07:55 PM
-System Logging Level = 2
-Creating Hardware Manager 0000000040526E60...
-Using Plugin folder of C:\Users\chan1\Documents\MSc Individual Project\Projects\Final\AR-Assisted-DRE-server\Assets\Plugins\x86_64\HwPlugins\
-Building factory using searchPath C:\Users\chan1\Documents\MSc Individual Project\Projects\Final\AR-Assisted-DRE-server\Assets\Plugins\x86_64\HwPlugins\Hw*Lib.dll
-Loading HwArrayG2Lib.dll...success!
-Loading HwArrayG3Lib.dll...success!
-Loading HwD600Lib.dll...success!
-Loading HwDigiUsbLib.dll...success!
-Loading HWEmulatorLib.dll...success!
-Loading HWLoadstarLib.dll...success!
-Loading HwMensorLib.dll...success!
-Loading HwNidaqLib.dll...success!
-Loading HwOmegaTempLib.dll...success!
-Loading HwReferenceLib.dll...success!
-Loading HWTileLib.dll...success!
-Built factory for 11 plugins:
-ArrayG2 ArrayG3 D600 DigiUsb Emulator Loadstar Mensor Nidaq OmegaTemp Reference Tile 
-
-Destroying Hardware Manager 0000000040526E60
+Destroying Hardware Manager 0000000053FA16E0
 Factory is purged
