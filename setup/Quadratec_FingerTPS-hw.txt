@@ -1,0 +1,9 @@
+HwD600BaudRate			921600
+HwD600DongleType		1
+HwD600BluetoothAddress		"00019525dfd8"
+HwD600ProductId			0x0606
+HwD600I2cAddresses 		2 1 2
+HwD600I2cLengths   		2 6 6
+HwD600CapSenseDacCurrent	50
+HwD600CapSenseScanCount		20
+HwD600ScanDelay			25
