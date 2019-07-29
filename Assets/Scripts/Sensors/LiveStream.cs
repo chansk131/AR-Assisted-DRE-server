@@ -30,10 +30,10 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using HoloToolkit.Unity;
 
-public class LiveStream : MonoBehaviour
+public class LiveStream : Singleton<LiveStream>
 {
-    public static LiveStream Instance { get; private set; }
 
     /**
 	 * Plugin interface
@@ -76,12 +76,8 @@ public class LiveStream : MonoBehaviour
     /**
 	 * Public members
 	 */
-    public float xOffset = 0f;
-    public float yOffset = 0f;
-    public float zOffset = 0f;
-    public float xRotation = 0f;
-    public float yRotation = 0f;
-    public float zRotation = 0f;
+    public Vector3 TranslationOffset = new Vector3(2.18f, 1.19f, 5.05f);
+    public Vector3 RotationOffset;
     public bool sensorTS1 = false;
     public bool sensorTS2 = false;
     public bool sensorTS3 = false;
@@ -174,7 +170,6 @@ public class LiveStream : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
         this.sensorOffset = Vector3.zero;
         Debug.Log("Awake");
 
@@ -338,9 +333,7 @@ public class LiveStream : MonoBehaviour
                 this.fQ.z = this.recordNodeQPtr[pair.Key].z;
                 this.fQ.w = this.recordNodeQPtr[pair.Key].w;
 
-                this.fXLocal.x = this.recordNodeXPtr[pair.Key].x * 0.001f + xOffset * 0.01f;
-                this.fXLocal.y = this.recordNodeXPtr[pair.Key].y * 0.001f + yOffset * 0.01f;
-                this.fXLocal.z = this.recordNodeXPtr[pair.Key].z * 0.001f + zOffset * 0.01f;
+                this.fXLocal = (Vector3)recordNodeXPtr[pair.Key] * 0.001f + TranslationOffset * 0.01f;
 
                 // update position
                 Vector3 newLocalPosition = new Vector3(-fXLocal.y, -fXLocal.z, -fXLocal.x);
@@ -348,7 +341,7 @@ public class LiveStream : MonoBehaviour
 
                 // update orientation
                 Quaternion sQ = new Quaternion(-fQ.y, -fQ.z, -fQ.x, fQ.w);
-                Quaternion newSq = Quaternion.Euler(sQ.eulerAngles + new Vector3(xRotation, yRotation, zRotation));
+                Quaternion newSq = Quaternion.Euler(sQ.eulerAngles + RotationOffset);
                 this.fingersGO[pair.Key].transform.localRotation = newSq * this.cQ[pair.Key];  // with finger calibration
 
                 // apply finger height
