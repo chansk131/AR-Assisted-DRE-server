@@ -8,6 +8,7 @@ public class ForceSender : Singleton<ForceSender>
     LiveStream livestream;
 
     public float Force;
+    private float offset = 0;
 
 	// Use this for initialization
     private void Start ()
@@ -19,7 +20,12 @@ public class ForceSender : Singleton<ForceSender>
 	// Update is called once per frame
     private void Update ()
     {
-        Force = livestream.pressureViz;
+        Force = livestream.pressureViz + offset;
         CustomMessages.Instance.SendForce(Force);
 	}
+
+    public void ResetForce()
+    {
+        offset = -livestream.pressureViz;
+    }
 }
