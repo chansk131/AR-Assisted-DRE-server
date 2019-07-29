@@ -1,20 +1,25 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using HoloToolkit.Unity;
 using UnityEngine;
 
-public class ForceSender : MonoBehaviour
+public class ForceSender : Singleton<ForceSender>
 {
     LiveStream livestream;
+
+    public float Force;
+
 	// Use this for initialization
-	void Start ()
+    private void Start ()
     {
         livestream = GetComponent<LiveStream>();
 		
 	}
 	
 	// Update is called once per frame
-	void Update ()
+    private void Update ()
     {
-        CustomMessages.Instance.SendForce(livestream.pressureViz);
+        Force = livestream.pressureViz;
+        CustomMessages.Instance.SendForce(Force);
 	}
 }
