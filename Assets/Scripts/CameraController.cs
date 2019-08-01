@@ -16,11 +16,11 @@ public class CameraController : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.W))
         {
-            transform.position += Vector3.forward * 0.1f;
+            transform.Translate(new Vector3(0, 0, speed * Time.deltaTime));
         }
         else if (Input.GetKeyDown(KeyCode.S))
         {
-            transform.position += Vector3.back * 0.1f;
+            transform.Translate(new Vector3(0, 0, -speed * Time.deltaTime));
         }
         else if (Input.GetKeyDown(KeyCode.A))
         {
@@ -47,5 +47,11 @@ public class CameraController : MonoBehaviour {
         {
             transform.Translate(new Vector3(0, speed * Time.deltaTime, 0));
         }
+    }
+
+    public void ResetCameraTransform()
+    {
+        transform.localPosition = new Vector3(0.05f, 0.37f, -0.25f);
+        transform.localEulerAngles = new Vector3(90f, 0, 0);
     }
 }

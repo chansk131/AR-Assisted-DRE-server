@@ -7,7 +7,7 @@ public class CameraMovement : MonoBehaviour
 
     public float lookSpeedH = 2f;
     public float lookSpeedV = 2f;
-    public float zoomSpeed = 2f;
+    public float zoomSpeed = 0.5f;
     public float dragSpeed = 6f;
 
     private float yaw = 0f;
@@ -21,7 +21,7 @@ public class CameraMovement : MonoBehaviour
             yaw += lookSpeedH * Input.GetAxis("Mouse X");
             pitch -= lookSpeedV * Input.GetAxis("Mouse Y");
 
-            transform.eulerAngles = new Vector3(pitch, yaw, 0f);
+            transform.eulerAngles = new Vector3(90 + pitch, yaw, 0f);
         }
 
         //drag camera around with Middle Mouse
