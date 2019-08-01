@@ -20,6 +20,7 @@ public class CustomMessages : Singleton<CustomMessages>
         LaserTransform,
         BenchtopTransform,
         Force,
+        Prostate,
         Max
     }
 
@@ -177,6 +178,25 @@ public class CustomMessages : Singleton<CustomMessages>
         }
     }
 
+    public void SendProstate(int prostate)
+    {
+        // If we are connected to a session, broadcast our head info
+        if (serverConnection != null && serverConnection.IsConnected())
+        {
+            // Create an outgoing network message to contain all the info we want to send
+            NetworkOutMessage msg = CreateMessage((byte)TestMessageID.Prostate);
+
+            msg.Write(prostate);
+
+            // Send the message as a broadcast, which will cause the server to forward it to all other users in the session.
+            serverConnection.Broadcast(
+                msg,
+                MessagePriority.Immediate,
+                MessageReliability.UnreliableSequenced,
+                MessageChannel.Avatar);
+        }
+    }
+
     protected override void OnDestroy()
     {
         base.OnDestroy();
@@ -232,6 +252,11 @@ public class CustomMessages : Singleton<CustomMessages>
     #endregion
 
     #region HelperFunctionsForReading
+
+    public int ReadInt(NetworkInMessage msg)
+    {
+        return msg.ReadInt32();
+    }
 
     public float ReadFloat(NetworkInMessage msg)
     {
